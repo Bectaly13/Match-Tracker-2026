@@ -2,27 +2,29 @@
 
   <h2>Modifier le match</h2>
 
-  <div class="form-group">
-    <label>Équipe 1</label>
-    <select [(ngModel)]="newTeam1Id">
-      @for(team of teams; track team.id) {
-        <option [ngValue]="team.id">
-          {{team.name}}
-        </option>
-      }
-    </select>
-  </div>
+  @if(match.type[0] != "G") {
+    <div class="form-group">
+      <label>Équipe 1</label>
+      <select [(ngModel)]="newTeam1Id">
+        @for(team of teams; track team.id) {
+          <option [ngValue]="team.id">
+            {{team.name}}
+          </option>
+        }
+      </select>
+    </div>
 
-  <div class="form-group">
-    <label>Équipe 2</label>
-    <select [(ngModel)]="newTeam2Id">
-      @for(team of teams; track team.id) {
-        <option [ngValue]="team.id">
-          {{team.name}}
-        </option>
-      }
-    </select>
-  </div>
+    <div class="form-group">
+      <label>Équipe 2</label>
+      <select [(ngModel)]="newTeam2Id">
+        @for(team of teams; track team.id) {
+          <option [ngValue]="team.id">
+            {{team.name}}
+          </option>
+        }
+      </select>
+    </div>
+  }
 
   <div class="form-group">
     <label>Chaîne</label>

@@ -7,7 +7,7 @@ import { DatabaseService } from './database';
   providedIn: 'root',
 })
 export class VersionHandlerService {
-  private appVersion: number = 3;
+  private appVersion: number = 4;
 
   constructor(
     private storage: StorageService,
@@ -43,6 +43,10 @@ export class VersionHandlerService {
         await this.updateToV3();
       }
 
+      if(userVersion <= 3) { // user en v1, v2 ou v3
+        await this.updateToV4();
+      }
+
       await this.storage.set("version", this.appVersion);
     }
   }
@@ -57,5 +61,11 @@ export class VersionHandlerService {
     // v3 : implémentation de notifications
     await this.storage.set("permissions", "prompt");
     await this.storage.set("notifications", false);
+  }
+
+  async updateToV4() {
+    // v4 : version de démo avec modification des dates des matchs
+    const matches = this.db.db.matches;
+    await this.db.updateTable("matches", matches);
   }
 }

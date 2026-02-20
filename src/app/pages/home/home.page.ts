@@ -6,7 +6,6 @@ import { IonContent, ViewWillEnter } from '@ionic/angular/standalone';
 import { HomeButtonComponent } from 'src/app/components/home-button/home-button.component';
 
 import { ThemeService } from 'src/app/services/theme';
-import { LocalNotifications } from '@capacitor/local-notifications';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +15,6 @@ import { LocalNotifications } from '@capacitor/local-notifications';
   imports: [IonContent, CommonModule, FormsModule, HomeButtonComponent]
 })
 export class HomePage implements ViewWillEnter {
-  a: number = 0;
 
   constructor(
     private theme: ThemeService

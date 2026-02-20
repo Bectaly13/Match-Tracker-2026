@@ -21,14 +21,37 @@ export class NotificationsService {
 
   async checkPermissions() {
     await this.storage.set("permissions", (await LocalNotifications.checkPermissions()).display);
-    return await this.storage.get("permissions") || "prompt";
+    return await this.storage.get("permissions");
   }
   
   async init() {
     if(await this.checkPermissions() != "granted") return;
 
     await this.cancelAllNotifications();
+    await this.createChannel();
 
+    const enrichedMatches = await this.prepareMatchData();
+    await this.scheduleAllMatchNotifications(enrichedMatches);
+  }
+
+  async cancelAllNotifications() {
+    const db = await this.storage.get("db");
+    const matches = db.matches;
+
+    for(let match of matches) {
+      await this.cancelNotification(match);
+    }
+  }
+
+  async createChannel() {
+    await LocalNotifications.createChannel({
+      id: "match_reminder",
+      name: "Match reminder",
+      importance: 5,
+    })
+  }
+
+  async prepareMatchData() {
     const db = await this.storage.get("db");
     const teams = db.teams;
     const matches = db.matches;
@@ -56,16 +79,7 @@ export class NotificationsService {
       };
     });
 
-    await this.scheduleAllMatchNotifications(enrichedMatches);
-  }
-
-  async cancelAllNotifications() {
-    const db = await this.storage.get("db");
-    const matches = db.matches;
-
-    for(let match of matches) {
-      await this.cancelNotification(match);
-    }
+    return enrichedMatches;
   }
 
   async cancelNotification(match: Match) {
@@ -98,6 +112,7 @@ export class NotificationsService {
         body: `${match.name_team_1} - ${match.name_team_2} commence dans 1 heure.`,
         largeBody: `${match.name_team_1} - ${match.name_team_2} commence dans 1 heure.`,
         summaryText: `${match.type}`,
+        channelId: "match_reminder",
         schedule: {at: oneHourBefore}
       });
     }
@@ -109,6 +124,7 @@ export class NotificationsService {
         body: `${match.name_team_1} - ${match.name_team_2} commence dans 5 minutes.`,
         largeBody: `${match.name_team_1} - ${match.name_team_2} commence dans 5 minutes.`,
         summaryText: `${match.type}`,
+        channelId: "match_reminder",
         schedule: {at: fiveMinutesBefore}
       });
     }
