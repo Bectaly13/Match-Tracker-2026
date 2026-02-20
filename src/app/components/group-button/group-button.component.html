@@ -1,0 +1,16 @@
+<div class="group-button" (click)="redirect()">
+
+  <div class="group-name">
+    <div class="group">Groupe</div>
+    <div class="name">{{groupName()}}</div>
+  </div>
+
+  <div class="flags">
+    @for(team of teams(); track $index) {
+      <div class="flag">
+        <img [src]="'assets/countries/' + team + '.png'" [alt]="'Drapeau ' + groupName() + ' ' + $index">
+      </div>
+    }
+  </div>
+
+</div>

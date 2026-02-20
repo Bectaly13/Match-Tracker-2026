@@ -1,0 +1,30 @@
+.groups-content {
+    --background: var(--app-background);
+}
+
+/* Select */
+.select-container {
+    margin: 20px 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+select {
+  padding: 8px;
+  border-radius: 8px;
+  height: 45.6px;
+  border: 2px solid var(--modal-input-border);
+}
+
+select:focus {
+  border-color: var(--modal-input-focus-border);
+}
+
+/* Groups */
+.groups-container {
+    margin: 20px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

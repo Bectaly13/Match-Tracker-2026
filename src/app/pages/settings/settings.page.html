@@ -1,0 +1,75 @@
+<app-header title="Paramètres" backPath="home"/>
+
+<ion-content [fullscreen]="true" class="settings-content">
+
+  <div class="settings-container">
+    <div class="settings">
+      <div class="title">
+        Notifications
+      </div>
+      <div class="toggle-list">
+        <div class="toggle">
+          <div class="toggle-description">Annonces de matchs</div>
+          <ion-toggle [(ngModel)]="notificationsBool" (ionChange)="toggleChange($event)"></ion-toggle>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="settings">
+      <div class="title">
+        Changer de thème
+      </div>
+      <div class="theme-settings-selection">
+        @for(themeOption of themes; track themeOption) {
+          <label class="theme-option">
+            <input
+              type="radio"
+              name="theme"
+              [value]="themeOption"
+              [checked]="themeOption === currentTheme"
+              (change)="changeTheme(themeOption)"
+            />
+            <span>{{themeOption}}</span>
+          </label>
+        }
+      </div>
+    </div>
+
+    <div class="settings">
+      <div class="title">
+        Gérer les chaînes
+      </div>
+      <div class="channels-settings-list">
+        @for(channel of channels; track $index) {
+          @if(channel != "-") {
+            <div class="channels-settings-list-item">
+              <div class="channels-settings-list-item-title">
+                {{channel}}
+              </div>
+              <div class="channels-settings-list-item-delete" (click)="deleteChannel(channel)">
+                X
+              </div>
+            </div>
+          }
+        }
+      </div>
+      <div class="channels-settings-add">
+        <div class="channels-settings-add-button" (click)="openAddChannelModal()">
+          Ajouter une chaîne
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @if(showAddChannelModal) {
+    <div class="custom-modal-backdrop" (click)="closeAddChannelModal()">
+      <div class="custom-modal" (click)="$event.stopPropagation()">
+        <app-add-channel
+          (close)="closeAddChannelModal($event)">
+        </app-add-channel>
+      </div>
+    </div>
+  }
+
+</ion-content>

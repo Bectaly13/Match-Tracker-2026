@@ -1,0 +1,85 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Conteneur principal */
+.modal-content {
+  width: 100%;
+  height: 100%;
+
+  background: var(--app-background);
+  border-radius: 16px;
+
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Titre */
+h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--modal-title);
+}
+
+/* Input */
+input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 2px solid var(--modal-input-border);
+
+  font-size: 1rem;
+
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+input:focus {
+  border-color: var(--modal-input-focus-border);
+}
+
+/* Boutons */
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+button {
+  flex: 1;
+
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+
+  font-size: 1rem;
+  cursor: pointer;
+
+  transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+/* Bouton Annuler */
+button:first-child {
+  background: var(--modal-button-background-cancel);
+  color: var(--modal-button-background-cancel-title);
+}
+
+/* Bouton Valider */
+button:last-child {
+  background: var(--modal-button-background-confirm);
+  color: var(--modal-button-background-confirm-title);
+}
+
+/* Effet clic */
+button:active {
+  transform: scale(0.9);
+}

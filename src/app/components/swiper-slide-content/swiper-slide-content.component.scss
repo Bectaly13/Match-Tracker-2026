@@ -1,0 +1,108 @@
+.slide-content {
+    padding: 10px;
+}
+
+.matches-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.match-card {
+    width: 100%;
+
+    background: var(--match-card-background);
+    border: 3px solid var(--match-card-border);
+    border-radius: 6px;
+
+    color: var(--match-text);
+
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.match-card-even {
+    margin-bottom: 5px;
+}
+
+.match-card-odd {
+    margin-bottom: 20px;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto 1fr;
+  align-items: center;
+  gap: 8px;
+}
+
+.country {
+  font-size: 1.1rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flag {
+    width: 50px;
+    height: auto;
+
+    border-radius: 50%;
+    border: 3px solid var(--match-flag-border);
+}
+
+.middle {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto 1fr;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.extra-score {
+  text-align: center;
+}
+
+.score {
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.datetime {
+    font-style: italic;
+}
+
+/* -------------------- */
+/* MODALE CUSTOM */
+/* -------------------- */
+
+.custom-modal-backdrop {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
+}
+
+.custom-modal-played {
+  width: 80%;
+  height: 85%;
+}
+
+.custom-modal-upcoming {
+  width: 80%;
+  height: 60%;
+}

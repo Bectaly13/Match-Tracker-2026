@@ -1,0 +1,48 @@
+<div class="modal-content">
+
+  <h2>Modifier le match</h2>
+
+  <div class="form-group">
+    <label>Équipe 1</label>
+    <select [(ngModel)]="newTeam1Id">
+      @for(team of teams; track team.id) {
+        <option [ngValue]="team.id">
+          {{team.name}}
+        </option>
+      }
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Équipe 2</label>
+    <select [(ngModel)]="newTeam2Id">
+      @for(team of teams; track team.id) {
+        <option [ngValue]="team.id">
+          {{team.name}}
+        </option>
+      }
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Chaîne</label>
+    <select [(ngModel)]="newChannel">
+      @for(channel of channels; track $index) {
+        <option [value]="channel">
+          {{channel}}
+        </option>
+      }
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Note</label>
+    <input type="text" [(ngModel)]="newNote">
+  </div>
+
+  <div class="buttons">
+    <button (click)="cancel()">Annuler</button>
+    <button (click)="save()">Valider</button>
+  </div>
+
+</div>

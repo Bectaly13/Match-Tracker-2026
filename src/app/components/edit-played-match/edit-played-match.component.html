@@ -1,0 +1,79 @@
+<div class="modal-content">
+
+  <h2>Modifier le match</h2>
+
+  <div class="form-group">
+    <label>Équipe 1</label>
+    <select [(ngModel)]="newTeam1Id">
+      @for(team of teams; track team.id) {
+        <option [ngValue]="team.id">
+          {{team.name}}
+        </option>
+      }
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Score équipe 1</label>
+    @if(type[0] != "G") {
+      <div class="double-input">
+        <input type="text" [(ngModel)]="newTeam1Score">
+        <input type="text" [(ngModel)]="newTeam1ExtraScore">
+      </div>
+    }
+    @else {
+      <input type="text" [(ngModel)]="newTeam1Score">
+    }
+  </div>
+
+  <div class="form-group">
+    <label>Équipe 2</label>
+    <select [(ngModel)]="newTeam2Id">
+      @for(team of teams; track team.id) {
+        <option [ngValue]="team.id">
+          {{team.name}}
+        </option>
+      }
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Score équipe 2</label>
+    @if(type[0] != "G") {
+      <div class="double-input">
+        <input type="text" [(ngModel)]="newTeam2Score">
+        <input type="text" [(ngModel)]="newTeam2ExtraScore">
+      </div>
+    }
+    @else {
+      <input type="text" [(ngModel)]="newTeam2Score">
+    }
+  </div>
+
+  <div class="form-group">
+    <label>Chaîne</label>
+    <select [(ngModel)]="newChannel">
+      @for(channel of channels; track $index) {
+        <option [value]="channel">
+          {{channel}}
+        </option>
+      }
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Note</label>
+    <input type="text" [(ngModel)]="newNote">
+  </div>
+
+  <div class="form-group-checkbox">
+    <label>Match terminé</label>
+    <input type="checkbox" [(ngModel)]="newState">
+  </div>
+
+  <div class="buttons">
+    <button (click)="cancel()">Annuler</button>
+    <button (click)="save()">Valider</button>
+  </div>
+
+</div>

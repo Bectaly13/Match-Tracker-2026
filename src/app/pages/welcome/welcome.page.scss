@@ -1,0 +1,22 @@
+.welcome-content {
+  --background: var(--app-background);
+}
+
+.safe-area-handler {
+  height: var(--safe-top);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+
+  padding-top: 15vh;
+  padding-right: 5vw;
+  padding-bottom: 15vh;
+  padding-left: 5vw;
+}
+
+.logo {
+  width: 90vw;
+  height: auto;
+}

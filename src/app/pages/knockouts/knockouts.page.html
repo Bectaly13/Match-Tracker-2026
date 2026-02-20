@@ -1,0 +1,42 @@
+<app-header title="Élimination directe" backPath="home"/>
+
+<ion-content [fullscreen]="true" class="knockouts-content">
+
+  <div class="header">
+    <div class="prev">
+      <div class="button" [ngClass]="{'button-disabled': slideIndex == 0, 'button-enabled': slideIndex != 0}" (click)="goPrev()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </div>
+    </div>
+    <div class="title">
+      <span>{{matchTypes[slideIndex]}}</span>
+    </div>
+    <div class="next">
+      <div class="button" [ngClass]="{'button-disabled': slideIndex == (matchTypes.length - 1), 'button-enabled': slideIndex != (matchTypes.length - 1)}" (click)="goNext()">
+        <ion-icon name="arrow-forward-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+  @if(slideIndex == 0) {
+    <!-- 1/16 -->
+    <app-swiper-slide-content [matches]="matches16" (reload)="reloadMatches()"/>
+  }
+  @else if(slideIndex == 1) {
+    <!-- 1/8 -->
+    <app-swiper-slide-content [matches]="matches8" (reload)="reloadMatches()"/>
+  }
+  @else if(slideIndex == 2) {
+    <!-- 1/4 -->
+    <app-swiper-slide-content [matches]="matches4" (reload)="reloadMatches()"/>
+  }
+  @else if(slideIndex == 3) {
+    <!-- 1/2 -->
+    <app-swiper-slide-content [matches]="matches2" (reload)="reloadMatches()"/>
+  }
+  @else {
+    <!-- Finales -->
+    <app-swiper-slide-content [matches]="matches1" (reload)="reloadMatches()"/>
+  }
+
+</ion-content>

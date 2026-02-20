@@ -1,0 +1,41 @@
+.home-content {
+  --background: var(--app-background);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 32px 20px;
+}
+
+.safe-area-handler {
+  height: var(--safe-top);
+}
+
+/* Logo en haut centré */
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.logo {
+  max-width: 60%;
+  height: auto;
+}
+
+/* Container des boutons */
+.buttons-container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  align-items: center;
+}
+
+.button-container {
+  width: 80%;
+}

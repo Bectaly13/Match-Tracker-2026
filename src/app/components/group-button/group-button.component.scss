@@ -1,0 +1,43 @@
+.group-button {
+    background: var(--group-button-background);
+    border-radius: 6px;
+
+    border: 3px solid var(--group-button-border);
+
+    padding: 5px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.group-name {
+    justify-items: center;
+    color: var(--group-button-title);
+}
+
+.group {
+    font-size: 1.5rem;
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.flags {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.flag {
+    img {
+        height: 40px;
+        width: auto;
+
+        border-radius: 50%;
+        border: 3px solid var(--group-button-flag-border);
+    }
+}

@@ -1,0 +1,40 @@
+.knockouts-content {
+    --background: var(--app-background);
+}
+
+.header {
+    padding: 10px 20px 0px;
+
+    font-size: 1.2rem;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.title {
+    color: var(--knockouts-header-text);
+    font-weight: bold;
+    padding: 6px;
+
+    align-content: center;
+}
+
+.button {
+    border-radius: 6px;
+    padding: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-enabled {
+    background: var(--knockouts-header-button-enabled);
+    color: var(--knockouts-header-button-enabled-text);
+}
+
+.button-disabled{
+    background: var(--knockouts-header-button-disabled);
+    color: var(--knockouts-header-button-disabled-text);
+}

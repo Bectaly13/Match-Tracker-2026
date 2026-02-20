@@ -1,0 +1,51 @@
+<div class="slide-content">
+
+  <div class="matches-list">
+    @for(match of matches(); track $index) {
+      <div class="match-card" [ngClass]="{'match-card-even': $index%2 == 0, 'match-card-odd': $index%2 == 1}" (click)="openEditMatchModal(match.id, match.state)">
+        <div class="top">
+          <span class="country">{{match.name_team_1}}</span>
+          <img [src]="'assets/countries/' + match.name_team_1 + '.png'" class="flag">
+          <span class="separator">-</span>
+          <img [src]="'assets/countries/' + match.name_team_2 + '.png'" class="flag">
+          <span class="country">{{match.name_team_2}}</span>
+        </div>
+
+        <div class="middle">
+          <span class="extra-score">({{match.extra_score_team_1}})</span>
+          <span class="score">{{match.score_team_1}}</span>
+          <span class="separator">-</span>
+          <span class="score">{{match.score_team_2}}</span>
+          <span class="extra-score">({{match.extra_score_team_2}})</span>
+        </div>
+
+        <div class="bottom">
+          <span class="datetime">{{match.date}}, {{match.time}}</span>
+        </div>
+      </div>
+    }
+  </div>
+
+  @if(showEditPlayedMatchModal) {
+    <div class="custom-modal-backdrop" (click)="closeEditPlayedMatchModal()">
+      <div class="custom-modal-played" (click)="$event.stopPropagation()">
+        <app-edit-played-match
+          [matchId]="selectedMatchId"
+          (close)="closeEditPlayedMatchModal($event)">
+        </app-edit-played-match>
+      </div>
+    </div>
+  }
+
+  @else if(showEditUpcomingMatchModal) {
+    <div class="custom-modal-backdrop" (click)="closeEditUpcomingMatchModal()">
+      <div class="custom-modal-upcoming" (click)="$event.stopPropagation()">
+        <app-edit-upcoming-match
+          [matchId]="selectedMatchId"
+          (close)="closeEditUpcomingMatchModal($event)">
+        </app-edit-upcoming-match>
+      </div>
+    </div>
+  }
+
+</div>

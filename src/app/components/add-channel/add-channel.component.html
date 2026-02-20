@@ -1,0 +1,16 @@
+<div class="modal-content">
+
+  <h2>Ajouter une chaîne</h2>
+
+  <input
+    type="text"
+    placeholder="Nom de la chaîne"
+    [(ngModel)]="channelName"
+  />
+
+  <div class="buttons">
+    <button (click)="cancel()">Annuler</button>
+    <button (click)="confirm()">Valider</button>
+  </div>
+
+</div>

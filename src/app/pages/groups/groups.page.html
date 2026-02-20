@@ -1,0 +1,25 @@
+<app-header title="Phase de groupes" backPath="home"/>
+
+<ion-content [fullscreen]="true" class="groups-content">
+
+  <div class="select-container">
+    <select [(ngModel)]="selectedTeam" (ngModelChange)="goToGroup($event)">
+      @for(team of sortedTeams; track $index) {
+        @if(team.id != 0) {
+          <option [ngValue]="team">
+            {{team.name}}
+          </option>
+        } 
+      }
+    </select>
+  </div>
+
+  <div class="groups-container">
+    @for(groupName of groupNames; track $index) {
+      <div class="group-container">      
+        <app-group-button [groupName]="groupNames[$index]" [teams]="teamsOrganized[groupName]"/>
+      </div>
+    }
+  </div>
+
+</ion-content>

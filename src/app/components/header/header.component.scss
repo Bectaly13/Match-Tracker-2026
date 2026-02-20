@@ -1,0 +1,71 @@
+.safe-area-handler {
+  height: var(--safe-top);
+  background: var(--header-background);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 6px 8px;
+
+  background: var(--header-background);
+
+  color: var(--header-text);
+}
+
+/* Bouton retour */
+.back-button-container {
+  height: 40px;
+  width: 40px;
+
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+.back-button {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background: var(--header-back-button-background);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button:active {
+  transform: scale(0.9);
+}
+
+/* Titre */
+.title {
+  flex: 1;
+
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+
+  pointer-events: none; /* évite conflits si on clique au centre */
+}
+
+/* Logo */
+.logo-container {
+  width: 40px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+  width: auto;
+}

@@ -1,2 +1,149 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+/* Thème FOOT */
+body.theme-foot {
+  --app-background: #a0eab2;
+  --version: rgb(73, 73, 73);
+
+  --header-background: #3ca556;
+  --header-text: white;
+  --header-back-button-background: rgb(20, 136, 45);
+
+  --home-button-background: #1f7d36;
+  --home-button-text-color: white;
+  --home-button-shadow: rgb(0, 45, 14);
+
+  --settings-title: black;
+  --settings-item-title: rgb(59, 59, 59);
+  --settings-add-channel-button: #1f7d36;
+
+  --modal-title: black;
+  --modal-input-border: rgb(26, 127, 22);  
+  --modal-input-focus-border: rgb(0, 174, 61);
+  --modal-button-background-confirm: #1f7d36;
+  --modal-button-background-confirm-title: white;
+  --modal-button-background-cancel: red;
+  --modal-button-background-cancel-title: white;
+  --modal-label: black;
+
+  --match-card-background: #1f7d36;
+  --match-card-border: #0c511d;
+  --match-type: rgb(213, 213, 213);
+  --match-flag-border: black;
+  --match-text: white;
+
+  --group-button-background: #1f7d36;
+  --group-button-border: #0c511d;
+  --group-button-title: white;
+  --group-button-flag-border: black;
+
+  --group-title: black;
+  --group-standings-head: #0c511d;
+  --group-standings-head-text: white;
+  --group-standings-body: #1f7d36;
+  --group-standings-body-text: white;
+
+  --knockouts-header-text: black;
+  --knockouts-header-button-enabled: #156b2b;
+  --knockouts-header-button-enabled-text: white;
+  --knockouts-header-button-disabled: #3da056;
+  --knockouts-header-button-disabled-text: rgb(233, 233, 233);
+}
+
+/* Thème LIGHT */
+body.theme-light {
+  --app-background: #eaeaea;
+  --version: rgb(65, 65, 65);
+  
+  --header-background: #c5c5c5;
+  --header-text: rgb(0, 0, 0);
+  --header-back-button-background: rgb(169, 169, 169);
+
+  --home-button-background: rgb(168, 168, 168);
+  --home-button-text-color: black;
+  --home-button-shadow: rgb(78, 78, 78);
+
+  --settings-title: black;
+  --settings-item-title: rgb(59, 59, 59);
+  --settings-add-channel-button: #1f7d36;
+
+  --modal-title: black;
+  --modal-input-border: rgb(126, 126, 126);  
+  --modal-input-focus-border: rgb(197, 197, 197);
+  --modal-button-background-confirm: #1f7d36;
+  --modal-button-background-confirm-title: white;
+  --modal-button-background-cancel: red;
+  --modal-button-background-cancel-title: white;
+  --modal-label: black;
+
+  --match-card-background: #bebebe;
+  --match-card-border: #5f5f5f;
+  --match-type: rgb(30, 30, 30);
+  --match-flag-border: black;
+  --match-text: rgb(0, 0, 0);
+
+  --group-button-background: #c7c7c7;
+  --group-button-border: #5f5f5f;
+  --group-button-title: black;
+  --group-button-flag-border: black;
+
+  --group-title: black;
+  --group-standings-head: #5f5f5f;
+  --group-standings-head-text: white;
+  --group-standings-body: #bebebe;
+  --group-standings-body-text: black;
+
+  --knockouts-header-text: black;
+  --knockouts-header-button-enabled: #747474;
+  --knockouts-header-button-enabled-text: white;
+  --knockouts-header-button-disabled: #9d9d9d;
+  --knockouts-header-button-disabled-text: rgb(233, 233, 233);
+}
+
+/* Thème DARK */
+body.theme-dark {
+  --app-background: #202020;
+  --version: rgb(170, 170, 170);
+
+  --header-background: #181818;
+  --header-text: rgb(255, 255, 255);
+  --header-back-button-background: rgb(34, 34, 34);
+
+  --home-button-background: rgb(45, 45, 45);
+  --home-button-text-color: white;
+  --home-button-shadow: rgb(20, 20, 20);
+
+  --settings-title: white;
+  --settings-item-title: rgb(185, 185, 185);
+  --settings-add-channel-button: #1f7d36;
+
+  --modal-title: white;
+  --modal-input-border: rgb(110, 110, 110);  
+  --modal-input-focus-border: rgb(158, 158, 158);
+  --modal-button-background-confirm: #1f7d36;
+  --modal-button-background-confirm-title: white;
+  --modal-button-background-cancel: red;
+  --modal-button-background-cancel-title: white;
+  --modal-label: white;
+
+  --match-card-background: #282828;
+  --match-card-border: #585858;
+  --match-type: rgb(168, 168, 168);
+  --match-flag-border: black;
+  --match-text: white;
+
+  --group-button-background: #2f2f2f;
+  --group-button-border: #585858;
+  --group-button-title: white;
+  --group-button-flag-border: black;
+
+  --group-title: white;
+  --group-standings-head: #585858;
+  --group-standings-head-text: white;
+  --group-standings-body: #282828;
+  --group-standings-body-text: white;
+
+  --knockouts-header-text: white;
+  --knockouts-header-button-enabled: #616161;
+  --knockouts-header-button-enabled-text: white;
+  --knockouts-header-button-disabled: #3d3d3d;
+  --knockouts-header-button-disabled-text: rgb(233, 233, 233);
+}

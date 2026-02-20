@@ -1,0 +1,77 @@
+<app-header title="Matchs joués" backPath="home"/>
+
+<ion-content [fullscreen]="true" class="played-content">
+
+  <div class="played-list-container">
+    <div class="played-list">
+      @for(match of playedMatches; track $index) {
+        <div class="played-list-item" (click)="openEditPlayedMatchModal(match.id)">
+
+          <div class="match-state">
+            <span class="state" [ngClass]="{
+              'state-played': match.played,
+              'state-pending': !match.played
+            }">
+              @if(match.played) {
+                Terminé
+              }
+              @else {
+                À compléter
+              }
+            </span>
+          </div>
+
+          <div class="match-type">
+            <span class="type">{{match.type}}</span>
+          </div>
+
+          <div class="teams-grid">
+            <div class="team team-left">
+              <img [src]="'assets/countries/' + match.name_team_1 + '.png'" class="flag">
+              <span class="score">
+                {{match.score_team_1}}
+                @if(match.type[0] != "G") {
+                  ({{match.extra_score_team_1}})
+                }
+              </span>
+              <span class="country">{{match.name_team_1}}</span>
+            </div>
+
+            <div class="separator">
+              -
+            </div>
+
+            <div class="team team-right">
+              <img [src]="'assets/countries/' + match.name_team_2 + '.png'" class="flag">
+              <span class="score">
+                {{match.score_team_2}}
+                @if(match.type[0] != "G") {
+                  ({{match.extra_score_team_2}})
+                }
+              </span>
+              <span class="country">{{match.name_team_2}}</span>
+            </div>
+          </div>
+
+          <div class="infos">
+            <span class="date-time">{{match.date}}, {{match.time}}</span>
+            <span class="channel">Chaîne : {{match.channel}}</span>
+            <span class="note">Note : {{match.note}}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  @if(showEditPlayedMatchModal) {
+    <div class="custom-modal-backdrop" (click)="closeEditPlayedMatchModal()">
+      <div class="custom-modal" (click)="$event.stopPropagation()">
+        <app-edit-played-match
+          [matchId]="selectedMatchId"
+          (close)="closeEditPlayedMatchModal($event)">
+        </app-edit-played-match>
+      </div>
+    </div>
+  }
+
+</ion-content>

@@ -1,0 +1,51 @@
+<app-header title="Matchs à venir" backPath="home"/>
+
+<ion-content [fullscreen]="true" class="upcoming-content">
+
+  <div class="upcoming-list-container">
+    <div class="upcoming-list">
+      @for(match of upcomingMatches; track $index) {
+        <div class="upcoming-list-item" (click)="openEditUpcomingMatchModal(match.id)">
+
+          <div class="match-type">
+            <span class="type">{{match.type}}</span>
+          </div>
+
+          <div class="teams-grid">
+            <div class="team team-left">
+              <img [src]="'assets/countries/' + match.name_team_1 + '.png'" class="flag">
+              <span class="country">{{match.name_team_1}}</span>
+            </div>
+
+            <div class="separator">
+              -
+            </div>
+
+            <div class="team team-right">
+              <img [src]="'assets/countries/' + match.name_team_2 + '.png'" class="flag">
+              <span class="country">{{match.name_team_2}}</span>
+            </div>
+          </div>
+
+          <div class="infos">
+            <span class="date-time">{{match.date}}, {{match.time}}</span>
+            <span class="channel">Chaîne : {{match.channel}}</span>
+            <span class="note">Note : {{match.note}}</span>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  @if(showEditUpcomingMatchModal) {
+    <div class="custom-modal-backdrop" (click)="closeEditUpcomingMatchModal()">
+      <div class="custom-modal" (click)="$event.stopPropagation()">
+        <app-edit-upcoming-match
+          [matchId]="selectedMatchId"
+          (close)="closeEditUpcomingMatchModal($event)">
+        </app-edit-upcoming-match>
+      </div>
+    </div>
+  }
+
+</ion-content>
