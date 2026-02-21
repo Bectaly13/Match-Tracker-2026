@@ -10,6 +10,7 @@ import { ThemeService, Theme } from 'src/app/services/theme';
 import { DatabaseService } from 'src/app/services/database';
 import { StorageService } from 'src/app/services/storage';
 import { NotificationsService } from 'src/app/services/notifications';
+import { LocalNotifications } from '@capacitor/local-notifications';
 
 @Component({
   selector: 'app-settings',
@@ -19,7 +20,12 @@ import { NotificationsService } from 'src/app/services/notifications';
   imports: [IonContent, IonToggle, CommonModule, FormsModule, HeaderComponent, AddChannelComponent]
 })
 export class SettingsPage implements ViewWillEnter {
-  notificationsBool: boolean = false;
+  notificationsBoolGroups: boolean = false;
+  notificationsBool16: boolean = false;
+  notificationsBool8: boolean = false;
+  notificationsBool4: boolean = false;
+  notificationsBool2: boolean = false;
+  notificationsBool1: boolean = false;
   themes: Theme[] = [];
   channels: string[] = [];
 
@@ -36,7 +42,7 @@ export class SettingsPage implements ViewWillEnter {
 
   async ionViewWillEnter() {
     await this.initTheme();
-    await this.initNotificationsBool();
+    await this.initNotifications();
     await this.initThemes();
     await this.initChannels();
   }
@@ -45,17 +51,13 @@ export class SettingsPage implements ViewWillEnter {
     await this.theme.initTheme();
   }
 
-  async initNotificationsBool() {
-    const perm = await this.notif.checkPermissions();
-
-    if(perm != "granted") {
-      this.notificationsBool = false;
-      await this.storage.set("notifications", false);
-    }
-
-    else {
-      this.notificationsBool = await this.storage.get("notifications");
-    }
+  async initNotifications() {    
+    this.notificationsBoolGroups = await this.storage.get("notificationsGroups");
+    this.notificationsBool16 = await this.storage.get("notifications16");
+    this.notificationsBool8 = await this.storage.get("notifications8");
+    this.notificationsBool4 = await this.storage.get("notifications4");
+    this.notificationsBool2 = await this.storage.get("notifications2");
+    this.notificationsBool1 = await this.storage.get("notifications1");
   }
 
   async initThemes() {
@@ -67,37 +69,52 @@ export class SettingsPage implements ViewWillEnter {
     this.channels = await this.storage.get("channels");
   }
 
-  async toggleChange(event: CustomEvent) {
+  async toggleChange(event: CustomEvent, toggleLabel: string) {
     const toggleState: boolean = event.detail.checked;
-
-    if(toggleState) {
-      await this.enableNotifications();
-    }
-
-    else {
-      await this.disableNotifications();
-    }
-  }
-
-  async enableNotifications() {
     await this.notif.requestPermissions();
 
-    if(await this.notif.checkPermissions() != "granted") {
-      alert("Les notifications sont actuellement désactivées. Pour les activer, rendez-vous dans les paramètres de votre téléphone et modifiez les autorisations de l'application.");
-      this.notificationsBool = false;
-      await this.storage.set("notifications", false);
-      return;
+    const perm = await this.notif.checkPermissions();
+    if(perm == "denied") alert("Les notifications ont été désactivées. Pour les réactiver, allez dans les paramètres de votre appareil pour accorder les autorisations à l'application.")
+
+    const notifState = toggleState && (perm == "granted")
+
+    switch (toggleLabel) {
+
+      case "groups":
+        this.notificationsBoolGroups = notifState;
+        await this.storage.set("notificationsGroups", notifState);
+        break;
+
+      case "1/16":
+        this.notificationsBool16 = notifState;
+        await this.storage.set("notifications16", notifState);
+        break;
+
+      case "1/8":
+        this.notificationsBool8 = notifState;
+        await this.storage.set("notifications8", notifState);
+        break;
+
+      case "1/4":
+        this.notificationsBool4 = notifState
+        await this.storage.set("notifications4", notifState);
+        break;
+
+      case "1/2":
+        this.notificationsBool2 = notifState;
+        await this.storage.set("notifications2", notifState);
+        break;
+
+      case "finale":
+        this.notificationsBool1 = notifState;
+        await this.storage.set("notifications1", notifState);
+        break;
     }
 
-    else {
+    // À chaque modification → on reschedule proprement
+    if (perm == "granted") {
       await this.notif.init();
-      await this.storage.set("notifications", true);
     }
-  }
-
-  async disableNotifications() {
-    await this.notif.cancelAllNotifications();
-    await this.storage.set("notifications", false);
   }
 
   async changeTheme(theme: Theme) {

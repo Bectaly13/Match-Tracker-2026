@@ -9,8 +9,31 @@
       </div>
       <div class="toggle-list">
         <div class="toggle">
-          <div class="toggle-description">Annonces de matchs</div>
-          <ion-toggle [(ngModel)]="notificationsBool" (ionChange)="toggleChange($event)"></ion-toggle>
+          <div class="toggle-description">Phase de groupes</div>
+          <ion-toggle [(ngModel)]="notificationsBoolGroups" (ionChange)="toggleChange($event, 'groups')"></ion-toggle>
+        </div>
+        <div class="toggle">
+          <div class="toggle-description">Seizièmes de finale</div>
+          <ion-toggle [(ngModel)]="notificationsBool16" (ionChange)="toggleChange($event, '1/16')"></ion-toggle>
+        </div>
+        <div class="toggle">
+          <div class="toggle-description">Huitièmes de finale</div>
+          <ion-toggle [(ngModel)]="notificationsBool8" (ionChange)="toggleChange($event, '1/8')"></ion-toggle>
+        </div>
+        <div class="toggle">
+          <div class="toggle-description">Quarts de finale</div>
+          <ion-toggle [(ngModel)]="notificationsBool4" (ionChange)="toggleChange($event, '1/4')"></ion-toggle>
+        </div>
+        <div class="toggle">
+          <div class="toggle-description">Demi-finales</div>
+          <ion-toggle [(ngModel)]="notificationsBool2" (ionChange)="toggleChange($event, '1/2')"></ion-toggle>
+        </div>
+        <div class="toggle">
+          <div class="toggle-description">Finales</div>
+          <ion-toggle [(ngModel)]="notificationsBool1" (ionChange)="toggleChange($event, 'finale')"></ion-toggle>
+        </div>
+        <div class="note">
+          Les matchs pour lesquels au moins l'une des deux équipes n'est pas encore déterminée n'auront pas de notifications programmées.
         </div>
       </div>
 
@@ -18,7 +41,7 @@
 
     <div class="settings">
       <div class="title">
-        Changer de thème
+        Changer le thème
       </div>
       <div class="theme-settings-selection">
         @for(themeOption of themes; track themeOption) {

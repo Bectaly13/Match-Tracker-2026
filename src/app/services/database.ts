@@ -127,25 +127,25 @@ export class DatabaseService {
 
     matches: [
       // Groupe A
-      { id: 1, id_team_1: 1, id_team_2: 2, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "11/01", time: "21:00", note: "-", played: false, type: "Groupe A" },
-      { id: 2, id_team_1: 3, id_team_2: 4, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "12/01", time: "04:00", note: "-", played: false, type: "Groupe A" },
-      { id: 3, id_team_1: 4, id_team_2: 2, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "18/01", time: "18:00", note: "-", played: false, type: "Groupe A" },
-      { id: 4, id_team_1: 1, id_team_2: 3, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "19/01", time: "03:00", note: "-", played: false, type: "Groupe A" },
-      { id: 5, id_team_1: 2, id_team_2: 3, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "25/01", time: "03:00", note: "-", played: false, type: "Groupe A" },
-      { id: 6, id_team_1: 4, id_team_2: 1, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "25/01", time: "03:00", note: "-", played: false, type: "Groupe A" },
+      { id: 1, id_team_1: 1, id_team_2: 2, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "11/06", time: "21:00", note: "-", played: false, type: "Groupe A" },
+      { id: 2, id_team_1: 3, id_team_2: 4, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "12/06", time: "04:00", note: "-", played: false, type: "Groupe A" },
+      { id: 3, id_team_1: 4, id_team_2: 2, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "18/06", time: "18:00", note: "-", played: false, type: "Groupe A" },
+      { id: 4, id_team_1: 1, id_team_2: 3, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "19/06", time: "03:00", note: "-", played: false, type: "Groupe A" },
+      { id: 5, id_team_1: 2, id_team_2: 3, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "25/06", time: "03:00", note: "-", played: false, type: "Groupe A" },
+      { id: 6, id_team_1: 4, id_team_2: 1, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "25/06", time: "03:00", note: "-", played: false, type: "Groupe A" },
 
       // Groupe B
-      { id: 7, id_team_1: 5, id_team_2: 6, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "12/01", time: "21:00", note: "-", played: false, type: "Groupe B" },
-      { id: 8, id_team_1: 7, id_team_2: 8, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "13/01", time: "21:00", note: "-", played: false, type: "Groupe B" },
-      { id: 9, id_team_1: 8, id_team_2: 6, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "18/01", time: "21:00", note: "-", played: false, type: "Groupe B" },
-      { id: 10, id_team_1: 5, id_team_2: 7, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "19/01", time: "00:00", note: "-", played: false, type: "Groupe B" },
-      { id: 11, id_team_1: 8, id_team_2: 5, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "24/01", time: "21:00", note: "-", played: false, type: "Groupe B" },
-      { id: 12, id_team_1: 6, id_team_2: 7, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "24/01", time: "21:00", note: "-", played: false, type: "Groupe B" },
+      { id: 7, id_team_1: 5, id_team_2: 6, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "12/06", time: "21:00", note: "-", played: false, type: "Groupe B" },
+      { id: 8, id_team_1: 7, id_team_2: 8, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "13/06", time: "21:00", note: "-", played: false, type: "Groupe B" },
+      { id: 9, id_team_1: 8, id_team_2: 6, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "18/06", time: "21:00", note: "-", played: false, type: "Groupe B" },
+      { id: 10, id_team_1: 5, id_team_2: 7, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "19/06", time: "00:00", note: "-", played: false, type: "Groupe B" },
+      { id: 11, id_team_1: 8, id_team_2: 5, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "24/06", time: "21:00", note: "-", played: false, type: "Groupe B" },
+      { id: 12, id_team_1: 6, id_team_2: 7, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "24/06", time: "21:00", note: "-", played: false, type: "Groupe B" },
 
       // Groupe C
-      { id: 13, id_team_1: 9, id_team_2: 10, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "14/01", time: "00:00", note: "-", played: false, type: "Groupe C" },
-      { id: 14, id_team_1: 11, id_team_2: 12, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "14/01", time: "03:00", note: "-", played: false, type: "Groupe C" },
-      { id: 15, id_team_1: 12, id_team_2: 10, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "20/01", time: "00:00", note: "-", played: false, type: "Groupe C" },
+      { id: 13, id_team_1: 9, id_team_2: 10, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "14/06", time: "00:00", note: "-", played: false, type: "Groupe C" },
+      { id: 14, id_team_1: 11, id_team_2: 12, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "14/06", time: "03:00", note: "-", played: false, type: "Groupe C" },
+      { id: 15, id_team_1: 12, id_team_2: 10, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "20/06", time: "00:00", note: "-", played: false, type: "Groupe C" },
       { id: 16, id_team_1: 9, id_team_2: 11, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "20/06", time: "03:00", note: "-", played: false, type: "Groupe C" },
       { id: 17, id_team_1: 10, id_team_2: 11, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "25/06", time: "00:00", note: "-", played: false, type: "Groupe C" },
       { id: 18, id_team_1: 12, id_team_2: 9, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "25/06", time: "00:00", note: "-", played: false, type: "Groupe C" },
@@ -223,48 +223,48 @@ export class DatabaseService {
       { id: 72, id_team_1: 46, id_team_2: 47, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "27/06", time: "23:00", note: "-", played: false, type: "Groupe L" },
 
       // Seizièmes de finale (16)
-      { id: 73,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "28/01", time: "21:00", note: "2ème A, 2ème B", played: false, type: "1/16" },
-      { id: 74,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "30/01", time: "03:00", note: "1er F, 2ème C", played: false, type: "1/16" },
-      { id: 75,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "29/01", time: "22:30", note: "1er E, 3ème A/B/C/D/F", played: false, type: "1/16" },
-      { id: 76,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "30/01", time: "23:00", note: "1er I, 3ème C/D/F/G/H", played: false, type: "1/16" },
-      { id: 77,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "01/02", time: "22:00", note: "1er G, 3ème A/E/H/I/J", played: false, type: "1/16" },
-      { id: 78,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "02/02", time: "02:00", note: "1er D, 3ème B/E/F/I/J", played: false, type: "1/16" },
-      { id: 79,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "02/02", time: "21:00", note: "1er H, 2ème J", played: false, type: "1/16" },
-      { id: 80,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "03/02", time: "01:00", note: "2ème K, 2ème L", played: false, type: "1/16" },
-      { id: 81,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "29/01", time: "19:00", note: "1er C, 2ème F", played: false, type: "1/16" },
-      { id: 82,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "30/01", time: "19:00", note: "2ème E, 2ème I", played: false, type: "1/16" },
-      { id: 83,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "01/02", time: "03:00", note: "1er A, 3ème C/E/F/H/I", played: false, type: "1/16" },
-      { id: 84,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "01/02", time: "18:00", note: "1er L, 3ème E/H/I/J/K", played: false, type: "1/16" },
-      { id: 85,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "03/02", time: "05:00", note: "1er B, 3ème E/F/G/I/J", played: false, type: "1/16" },
-      { id: 86,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "04/02", time: "03:30", note: "1er K, 3ème D/E/I/J/L", played: false, type: "1/16" },
-      { id: 87,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "03/02", time: "20:00", note: "2ème K, 2ème L", played: false, type: "1/16" },
-      { id: 88,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "04/02", time: "00:00", note: "1er J, 2ème H", played: false, type: "1/16" },
+      { id: 73,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "28/06", time: "21:00", note: "2ème A, 2ème B", played: false, type: "1/16" },
+      { id: 74,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "30/06", time: "03:00", note: "1er F, 2ème C", played: false, type: "1/16" },
+      { id: 75,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "29/06", time: "22:30", note: "1er E, 3ème A/B/C/D/F", played: false, type: "1/16" },
+      { id: 76,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "30/06", time: "23:00", note: "1er I, 3ème C/D/F/G/H", played: false, type: "1/16" },
+      { id: 77,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "01/07", time: "22:00", note: "1er G, 3ème A/E/H/I/J", played: false, type: "1/16" },
+      { id: 78,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "02/07", time: "02:00", note: "1er D, 3ème B/E/F/I/J", played: false, type: "1/16" },
+      { id: 79,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "02/07", time: "21:00", note: "1er H, 2ème J", played: false, type: "1/16" },
+      { id: 80,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "03/07", time: "01:00", note: "2ème K, 2ème L", played: false, type: "1/16" },
+      { id: 81,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "29/06", time: "19:00", note: "1er C, 2ème F", played: false, type: "1/16" },
+      { id: 82,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "30/06", time: "19:00", note: "2ème E, 2ème I", played: false, type: "1/16" },
+      { id: 83,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "01/07", time: "03:00", note: "1er A, 3ème C/E/F/H/I", played: false, type: "1/16" },
+      { id: 84,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "01/07", time: "18:00", note: "1er L, 3ème E/H/I/J/K", played: false, type: "1/16" },
+      { id: 85,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "03/07", time: "05:00", note: "1er B, 3ème E/F/G/I/J", played: false, type: "1/16" },
+      { id: 86,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "04/07", time: "03:30", note: "1er K, 3ème D/E/I/J/L", played: false, type: "1/16" },
+      { id: 87,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "03/07", time: "20:00", note: "2ème K, 2ème L", played: false, type: "1/16" },
+      { id: 88,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "04/07", time: "00:00", note: "1er J, 2ème H", played: false, type: "1/16" },
 
       // Huitièmes de finale (8)
-      { id: 89,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "04/02", time: "19:00", note: "-", played: false, type: "1/8" },
-      { id: 90,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "04/02", time: "23:00", note: "-", played: false, type: "1/8" },
-      { id: 91,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "07/02", time: "02:00", note: "-", played: false, type: "1/8" },
-      { id: 92,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "06/02", time: "21:00", note: "-", played: false, type: "1/8" },
-      { id: 93,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "05/02", time: "22:00", note: "-", played: false, type: "1/8" },
-      { id: 94,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "06/02", time: "02:00", note: "-", played: false, type: "1/8" },
-      { id: 95,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "07/02", time: "22:00", note: "-", played: false, type: "1/8" },
-      { id: 96,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "07/02", time: "18:00", note: "-", played: false, type: "1/8" },
+      { id: 89,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "04/07", time: "19:00", note: "-", played: false, type: "1/8" },
+      { id: 90,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "04/07", time: "23:00", note: "-", played: false, type: "1/8" },
+      { id: 91,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "07/07", time: "02:00", note: "-", played: false, type: "1/8" },
+      { id: 92,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "06/07", time: "21:00", note: "-", played: false, type: "1/8" },
+      { id: 93,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "05/07", time: "22:00", note: "-", played: false, type: "1/8" },
+      { id: 94,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "06/07", time: "02:00", note: "-", played: false, type: "1/8" },
+      { id: 95,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "07/07", time: "22:00", note: "-", played: false, type: "1/8" },
+      { id: 96,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "07/07", time: "18:00", note: "-", played: false, type: "1/8" },
 
       // Quarts de finale (4)
-      { id: 97,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "09/02", time: "22:00", note: "-", played: false, type: "1/4" },
-      { id: 98,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "10/02", time: "21:00", note: "-", played: false, type: "1/4" },
-      { id: 99,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "11/02", time: "23:00", note: "-", played: false, type: "1/4" },
-      { id: 100, id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "12/02", time: "03:00", note: "-", played: false, type: "1/4" },
+      { id: 97,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "09/07", time: "22:00", note: "-", played: false, type: "1/4" },
+      { id: 98,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "10/07", time: "21:00", note: "-", played: false, type: "1/4" },
+      { id: 99,  id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "11/07", time: "23:00", note: "-", played: false, type: "1/4" },
+      { id: 100, id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "12/07", time: "03:00", note: "-", played: false, type: "1/4" },
 
       // Demi-finales (2)
-      { id: 101, id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "14/02", time: "21:00", note: "-", played: false, type: "1/2" },
-      { id: 102, id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "15/02", time: "21:00", note: "-", played: false, type: "1/2" },
+      { id: 101, id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "14/07", time: "21:00", note: "-", played: false, type: "1/2" },
+      { id: 102, id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "15/07", time: "21:00", note: "-", played: false, type: "1/2" },
 
       // Petite finale (1)
-      { id: 103, id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "18/02", time: "23:00", note: "-", played: false, type: "Petite finale" },
+      { id: 103, id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "18/07", time: "23:00", note: "-", played: false, type: "Petite finale" },
 
       // Finale (1)
-      { id: 104, id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "19/02", time: "21:00", note: "-", played: false, type: "Finale" },
+      { id: 104, id_team_1: 0, id_team_2: 0, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "19/07", time: "21:00", note: "-", played: false, type: "Finale" },
     ]
   }
 

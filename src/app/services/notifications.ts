@@ -15,18 +15,13 @@ export class NotificationsService {
 
   async requestPermissions() {
     await LocalNotifications.requestPermissions();
-
-    await this.storage.set("permissions", (await LocalNotifications.checkPermissions()).display);
   }
 
   async checkPermissions() {
-    await this.storage.set("permissions", (await LocalNotifications.checkPermissions()).display);
-    return await this.storage.get("permissions");
+    return (await LocalNotifications.checkPermissions()).display;
   }
   
   async init() {
-    if(await this.checkPermissions() != "granted") return;
-
     await this.cancelAllNotifications();
     await this.createChannel();
 
@@ -43,7 +38,7 @@ export class NotificationsService {
     }
   }
 
-  async createChannel() {
+  private async createChannel() {
     await LocalNotifications.createChannel({
       id: "match_reminder",
       name: "Match reminder",
@@ -51,7 +46,35 @@ export class NotificationsService {
     })
   }
 
-  async prepareMatchData() {
+  private async isPhaseEnabled(match: Match): Promise<boolean> {
+    if (match.type.startsWith("G")) {
+      return await this.storage.get("notificationsGroups");
+    }
+
+    if (match.type === "1/16") {
+      return await this.storage.get("notifications16");
+    }
+
+    if (match.type === "1/8") {
+      return await this.storage.get("notifications8");
+    }
+
+    if (match.type === "1/4") {
+      return await this.storage.get("notifications4");
+    }
+
+    if (match.type === "1/2") {
+      return await this.storage.get("notifications2");
+    }
+
+    if (match.type === "Finale" || match.type === "Petite finale") {
+      return await this.storage.get("notifications1");
+    }
+
+    return false;
+  }
+
+  private async prepareMatchData() {
     const db = await this.storage.get("db");
     const teams = db.teams;
     const matches = db.matches;
@@ -82,7 +105,7 @@ export class NotificationsService {
     return enrichedMatches;
   }
 
-  async cancelNotification(match: Match) {
+  private async cancelNotification(match: Match) {
     await LocalNotifications.cancel({
       notifications: [
         {id: match.id * 10 + 1},
@@ -92,7 +115,12 @@ export class NotificationsService {
   }
 
   private async scheduleAllMatchNotifications(matches: any[]) {
-    for(let match of matches) {
+    for (let match of matches) {
+
+      if (!(await this.isPhaseEnabled(match))) continue;
+
+      if (match.id_team_1 === 0 || match.id_team_2 === 0) continue;
+
       await this.scheduleMatchNotification(match);
     }
   }

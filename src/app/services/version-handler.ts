@@ -7,7 +7,7 @@ import { DatabaseService } from './database';
   providedIn: 'root',
 })
 export class VersionHandlerService {
-  private appVersion: number = 4;
+  private appVersion: number = 5;
 
   constructor(
     private storage: StorageService,
@@ -26,8 +26,12 @@ export class VersionHandlerService {
       await this.storage.set("channels", this.db.channels);
       await this.storage.set("db", this.db.db);
 
-      await this.storage.set("permissions", "prompt");
-      await this.storage.set("notifications", false);
+      await this.storage.set("notificationsGroups", false);
+      await this.storage.set("notifications16", false);
+      await this.storage.set("notifications8", false);
+      await this.storage.set("notifications4", false);
+      await this.storage.set("notifications2", false);
+      await this.storage.set("notifications1", false);
     }
 
     else if(userVersion == this.appVersion) {
@@ -47,6 +51,10 @@ export class VersionHandlerService {
         await this.updateToV4();
       }
 
+      if(userVersion <= 4) {// user en v1, v2, v3 ou v4
+        await this.updateToV5();
+      }
+
       await this.storage.set("version", this.appVersion);
     }
   }
@@ -59,7 +67,6 @@ export class VersionHandlerService {
 
   async updateToV3() {
     // v3 : implémentation de notifications
-    await this.storage.set("permissions", "prompt");
     await this.storage.set("notifications", false);
   }
 
@@ -67,5 +74,20 @@ export class VersionHandlerService {
     // v4 : version de démo avec modification des dates des matchs
     const matches = this.db.db.matches;
     await this.db.updateTable("matches", matches);
+  }
+
+  async updateToV5() {
+    // v5 : annulation de la version de démo et nouvelles notifications
+    const matches = this.db.db.matches;
+    await this.db.updateTable("matches", matches);
+
+    await this.storage.remove("notifications");
+
+    await this.storage.set("notificationsGroups", false);
+    await this.storage.set("notifications16", false);
+    await this.storage.set("notifications8", false);
+    await this.storage.set("notifications4", false);
+    await this.storage.set("notifications2", false);
+    await this.storage.set("notifications1", false);
   }
 }
