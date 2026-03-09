@@ -8,7 +8,6 @@ export type Theme = "Football" | "Clair" | "Sombre";
   providedIn: 'root',
 })
 export class ThemeService {
-
   private defaultTheme: Theme = "Football";
   private themes = ["theme-foot", "theme-light", "theme-dark"];
 
@@ -19,7 +18,7 @@ export class ThemeService {
     this.applyTheme(theme);
   }
 
-  async applyTheme(theme: Theme) {
+  private async applyTheme(theme: Theme) {
     await this.storage.set("theme", theme);
     document.body.classList.remove(...this.themes);
 
@@ -35,7 +34,7 @@ export class ThemeService {
     }
   }
 
-  async getTheme() {
+  private async getTheme() {
     return await this.storage.get("theme") || this.defaultTheme;
   }
 }

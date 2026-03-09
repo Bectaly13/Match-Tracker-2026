@@ -59,24 +59,24 @@ export class VersionHandlerService {
     }
   }
 
-  async updateToV2() {
+  private async updateToV2() {
     // v2 : modification de la structure des matchs dans la BDD
     const matches = this.db.db.matches;
     await this.db.updateTable("matches", matches);
   }
 
-  async updateToV3() {
+  private async updateToV3() {
     // v3 : implémentation de notifications
     await this.storage.set("notifications", false);
   }
 
-  async updateToV4() {
+  private async updateToV4() {
     // v4 : version de démo avec modification des dates des matchs
     const matches = this.db.db.matches;
     await this.db.updateTable("matches", matches);
   }
 
-  async updateToV5() {
+  private async updateToV5() {
     // v5 : annulation de la version de démo et nouvelles notifications
     const matches = this.db.db.matches;
     await this.db.updateTable("matches", matches);
