@@ -56,11 +56,11 @@ export class DatabaseService {
       { id: 1, name: "Mexique", short_name: "MEX", group_name: "A" },
       { id: 2, name: "Afrique du Sud", short_name: "RSA", group_name: "A" },
       { id: 3, name: "Corée du Sud", short_name: "KOR", group_name: "A" },
-      { id: 4, name: "XXX", short_name: "XXX", group_name: "A" },
+      { id: 4, name: "Tchéquie", short_name: "CZE", group_name: "A" },
 
       // Groupe B
       { id: 5, name: "Canada", short_name: "CAN", group_name: "B" },
-      { id: 6, name: "XXX", short_name: "XXX", group_name: "B" },
+      { id: 6, name: "Bosnie-Herzégovine", short_name: "BIH", group_name: "B" },
       { id: 7, name: "Qatar", short_name: "QAT", group_name: "B" },
       { id: 8, name: "Suisse", short_name: "SUI", group_name: "B" },
 
@@ -74,7 +74,7 @@ export class DatabaseService {
       { id: 13, name: "États-Unis", short_name: "USA", group_name: "D" },
       { id: 14, name: "Paraguay", short_name: "PAR", group_name: "D" },
       { id: 15, name: "Australie", short_name: "AUS", group_name: "D" },
-      { id: 16, name: "XXX", short_name: "XXX", group_name: "D" },
+      { id: 16, name: "Turquie", short_name: "TUR", group_name: "D" },
 
       // Groupe E
       { id: 17, name: "Allemagne", short_name: "GER", group_name: "E" },
@@ -85,7 +85,7 @@ export class DatabaseService {
       // Groupe F
       { id: 21, name: "Pays-Bas", short_name: "NED", group_name: "F" },
       { id: 22, name: "Japon", short_name: "JPN", group_name: "F" },
-      { id: 23, name: "XXX", short_name: "XXX", group_name: "F" },
+      { id: 23, name: "Suède", short_name: "SWE", group_name: "F" },
       { id: 24, name: "Tunisie", short_name: "TUN", group_name: "F" },
 
       // Groupe G
@@ -103,7 +103,7 @@ export class DatabaseService {
       // Groupe I
       { id: 33, name: "France", short_name: "FRA", group_name: "I" },
       { id: 34, name: "Sénégal", short_name: "SEN", group_name: "I" },
-      { id: 35, name: "XXX", short_name: "XXX", group_name: "I" },
+      { id: 35, name: "Irak", short_name: "IRQ", group_name: "I" },
       { id: 36, name: "Norvège", short_name: "NOR", group_name: "I" },
 
       // Groupe J
@@ -114,7 +114,7 @@ export class DatabaseService {
 
       // Groupe K
       { id: 41, name: "Portugal", short_name: "POR", group_name: "K" },
-      { id: 42, name: "XXX", short_name: "XXX", group_name: "K" },
+      { id: 42, name: "RD Congo", short_name: "COD", group_name: "K" },
       { id: 43, name: "Ouzbékistan", short_name: "UZB", group_name: "K" },
       { id: 44, name: "Colombie", short_name: "COL", group_name: "K" },
 

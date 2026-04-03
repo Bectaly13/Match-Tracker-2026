@@ -18,7 +18,7 @@ export class ThemeService {
     this.applyTheme(theme);
   }
 
-  private async applyTheme(theme: Theme) {
+  async applyTheme(theme: Theme) {
     await this.storage.set("theme", theme);
     document.body.classList.remove(...this.themes);
 
@@ -34,7 +34,7 @@ export class ThemeService {
     }
   }
 
-  private async getTheme() {
+  async getTheme() {
     return await this.storage.get("theme") || this.defaultTheme;
   }
 }

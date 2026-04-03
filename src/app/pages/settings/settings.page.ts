@@ -62,7 +62,7 @@ export class SettingsPage implements ViewWillEnter {
 
   async initThemes() {
     this.themes = this.db.themes;
-    this.currentTheme = await this.storage.get("theme");
+    this.currentTheme = await this.theme.getTheme();
   }
 
   async initChannels() {

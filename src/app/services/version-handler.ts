@@ -7,7 +7,7 @@ import { DatabaseService } from './database';
   providedIn: 'root',
 })
 export class VersionHandlerService {
-  private appVersion: number = 5;
+  private appVersion: number = 6;
 
   constructor(
     private storage: StorageService,
@@ -55,6 +55,10 @@ export class VersionHandlerService {
         await this.updateToV5();
       }
 
+      if(userVersion <= 5) {// user en v1, v2, v3, v4 ou v5
+        await this.updateToV6();
+      }
+
       await this.storage.set("version", this.appVersion);
     }
   }
@@ -89,5 +93,11 @@ export class VersionHandlerService {
     await this.storage.set("notifications4", false);
     await this.storage.set("notifications2", false);
     await this.storage.set("notifications1", false);
+  }
+
+  private async updateToV6() {
+    // v6 : ajout des 6 dernières équipes qualifiées à la base de données
+    const teams = this.db.db.teams;
+    await this.db.updateTable("teams", teams);
   }
 }
