@@ -7,7 +7,7 @@ import { DatabaseService } from './database';
   providedIn: 'root',
 })
 export class VersionHandlerService {
-  private appVersion: number = 6;
+  private appVersion: number = 7;
 
   constructor(
     private storage: StorageService,
@@ -59,6 +59,10 @@ export class VersionHandlerService {
         await this.updateToV6();
       }
 
+      if(userVersion <=6) {// user en v1, v2, v3, v4, v5 ou v6
+        await this.updateToV7();  
+      }
+
       await this.storage.set("version", this.appVersion);
     }
   }
@@ -99,5 +103,14 @@ export class VersionHandlerService {
     // v6 : ajout des 6 dernières équipes qualifiées à la base de données
     const teams = this.db.db.teams;
     await this.db.updateTable("teams", teams);
+  }
+
+  private async updateToV7() {
+    // v7 : fix d'un missinput, match mal saisi
+    let db = await this.db.get();
+    let matches = db.matches;
+    let match = matches.find((match: any) => match.id == 30);
+    match.id_team_2 = 17; // != 18
+    await this.db.updateTable("matches", matches);
   }
 }

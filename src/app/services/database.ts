@@ -164,7 +164,7 @@ export class DatabaseService {
       { id: 27, id_team_1: 17, id_team_2: 19, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "20/06", time: "22:00", note: "-", played: false, type: "Groupe E" },
       { id: 28, id_team_1: 20, id_team_2: 18, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "21/06", time: "02:00", note: "-", played: false, type: "Groupe E" },
       { id: 29, id_team_1: 18, id_team_2: 19, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "25/06", time: "22:00", note: "-", played: false, type: "Groupe E" },
-      { id: 30, id_team_1: 20, id_team_2: 18, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "25/06", time: "22:00", note: "-", played: false, type: "Groupe E" },
+      { id: 30, id_team_1: 20, id_team_2: 17, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "25/06", time: "22:00", note: "-", played: false, type: "Groupe E" },
 
       // Groupe F
       { id: 31, id_team_1: 21, id_team_2: 22, score_team_1: 0, extra_score_team_1: 0, score_team_2: 0, extra_score_team_2: 0, channel: "-", date: "14/06", time: "22:00", note: "-", played: false, type: "Groupe F" },
